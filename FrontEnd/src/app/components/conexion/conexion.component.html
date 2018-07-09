@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col s6">
+          <table class="responsive-table">
+            <thead>
+                 <th>Name</th>
+                 <th>Price</th>
+                 <th>Stock</th>
+                 <th>Add to car</th>
+            </thead>
+            <tbody>
+                 <tr *ngFor="let product of products">
+                    <td>{{product.name }} </td>
+                    <td>{{product.price}} </td>
+                    <td>{{product.stock}} </td>
+                    <td>
+                      <a (click)="addList(product)">
+                        <button class="waves-effect waves-light btn-small">buy</button>
+                      </a>
+                      
+                    </td>
+                  </tr>
+            </tbody>
+          </table>          
+        </div>
+        <div class="col s6">
+          <table class="responsive-table">
+            <thead>
+                 <th>Name</th>
+                 <th>Price</th>
+            </thead>
+            <tbody>
+                 <tr *ngFor="let product of temporal">
+                    <td>{{product.name }} </td>
+                    <td>{{product.price}} </td>
+                 </tr>
+            </tbody>
+          </table>                
+        </div>
+      </div>
+
+</div>
+
+
